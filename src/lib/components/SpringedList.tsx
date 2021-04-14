@@ -3,7 +3,7 @@
  */
 import React from 'react';
 const { Spring } = require('react-spring/renderprops') ;
-import { List } from 'react-virtualized';
+// import { List } from 'react-virtualized';
 
 export default function SpringedList() {
   const data = [...Array(100)].map((_, i) => ({ name: i }));
@@ -24,7 +24,7 @@ export default function SpringedList() {
     <div>
       <div style={{ height: lineHeight * limit, flexGrow: 1 }}>
         <Spring from={{ top: 0 }} to={{ top: lineHeight * (page.from - 1) }}>
-          {(props) => (
+          {/* {(props) => (
             <List
               height={lineHeight * limit}
               rowCount={data.length}
@@ -41,7 +41,7 @@ export default function SpringedList() {
               }}
               scrollTop={props.top}
             />
-          )}
+          )} */}
         </Spring>
       </div>
       <Pagination length={length} page={page} onPageUp={onPageUp} onPageDown={onPageDown} />
