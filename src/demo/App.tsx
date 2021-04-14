@@ -4,10 +4,11 @@ import QuicklyClient from './QuicklyClient';
 import ThemeProvider from './theming/ThemeProvider';
 
 function App() {
+  const hotkey = 'ctrl+shift+l';
   return (
       <ThemeProvider>
-        <QuicklyClient>
-          My app
+        <QuicklyClient hotkey={hotkey}>
+          {hotkey}
         </QuicklyClient>
       </ThemeProvider>
   );

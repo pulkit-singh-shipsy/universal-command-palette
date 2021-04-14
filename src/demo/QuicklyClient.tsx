@@ -3,9 +3,9 @@ import { useOptionsServices } from "./useOptionServices";
 import { QuicklyProvider, useQuickly } from '../index';
 
 
-const QuicklyClient = (props): React.ReactElement => {
+const QuicklyClient = (props: { hotkey: string, children: any }): React.ReactElement => {
 
-  return <QuicklyProvider hotkey="ctrl+shift+l">
+  return <QuicklyProvider hotkey={props.hotkey}>
     <QuicklyServices />
     {props.children}
   </QuicklyProvider>
