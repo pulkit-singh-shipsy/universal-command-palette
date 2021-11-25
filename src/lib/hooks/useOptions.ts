@@ -15,6 +15,7 @@ const useOptions = (props: QuicklyProviderProps) => {
   const refs = React.useRef({ serviceCallTimeout: undefined as NodeJS.Timeout | undefined});
   const [rowHeight, setRowHeight] = React.useState(DEFAULT_ROW_HEIGHT);
   const [listHeight, setListHeight] = React.useState(DEFAULT_LIST_HEIGHT);
+  const [cleanQueryStackOnHide, setCleanQueryStackOnHide] = React.useState(true);
 
   React.useEffect(() => {
     search();
@@ -54,6 +55,7 @@ const useOptions = (props: QuicklyProviderProps) => {
       setRowHeight(options.rowHeight || DEFAULT_ROW_HEIGHT);
       setListHeight(options.listHeight || DEFAULT_LIST_HEIGHT);
       setLoading(false);
+      setCleanQueryStackOnHide(options.cleanQueryStackOnHide || false);
     }
   };
 
@@ -104,6 +106,7 @@ const useOptions = (props: QuicklyProviderProps) => {
     loading,
     rowHeight,
     listHeight,
+    cleanQueryStackOnHide,
   };
 };
 

@@ -170,6 +170,9 @@ const useModel = (props: QuicklyProviderProps) => {
 
   const handleQuicklyModalClose = () => {
     setState({ isQuicklyModalVisible: false });
+    if (options.cleanQueryStackOnHide) {
+      cleanQueryStack();
+    }
   };
 
   // const setHighlightIdx = (idx: number) => {
@@ -281,6 +284,10 @@ const useModel = (props: QuicklyProviderProps) => {
 
   const registerOptionServices = (services: OptionService[]) => {
     options.registerOptionsServices(services);
+  };
+
+  const cleanQueryStack = () => {
+    options.setQueryStack([]);
   };
 
   /** ----------------------------------------------------------- */

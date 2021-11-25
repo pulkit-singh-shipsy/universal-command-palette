@@ -69,5 +69,6 @@ export interface OptionService extends Option {
     enableLocalSearch?: boolean; // We will search locally using 'text' prop.
     rowHeight?: number;
     listHeight?: number;
+    cleanQueryStackOnHide?: boolean;
   }>
 }
