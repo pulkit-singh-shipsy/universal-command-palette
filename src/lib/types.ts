@@ -37,7 +37,9 @@ export interface QuicklyBreadcrumbProps
 export interface QuicklyListProps
   extends StylesProps<ReturnType<typeof stylesQuicklyList>> {}
 
-export interface QuicklyModalProps extends StylesProps<ReturnType<typeof stylesQuicklyModal>> {}
+export interface QuicklyModalProps extends StylesProps<ReturnType<typeof stylesQuicklyModal>> {
+  model: Model;
+}
 
 export interface QuicklyContentProps extends StylesProps<ReturnType<typeof stylesQuicklyContent>> {}
 

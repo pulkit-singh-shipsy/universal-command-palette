@@ -6,7 +6,7 @@ import { QuicklyModalProps } from '../types';
 import useQuickly from '../hooks/useQuickly';
 import QuicklyContent from './QuicklyContent';
 
-const QuicklyModal = (props: QuicklyModalProps): React.ReactElement => {
+const QuicklyModal: React.FC<QuicklyModalProps> = (props) => {
   const { classes } = props;
 
   const model = useQuickly();
@@ -50,4 +50,4 @@ const QuicklyModal = (props: QuicklyModalProps): React.ReactElement => {
   );
 };
 
-export default withStyles(stylesQuicklyModal)(QuicklyModal);
+export default withStyles(stylesQuicklyModal as any)(QuicklyModal) as React.FC<Omit<QuicklyModalProps, "theme" | "classes">>;

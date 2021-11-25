@@ -18,4 +18,4 @@ const QuicklyIndex = (props: QuicklyIndexProps): React.ReactElement => {
   );
 };
 
-export default withStyles(stylesQuicklyLauncher)(QuicklyIndex);
+export default withStyles(stylesQuicklyLauncher as any)(QuicklyIndex);

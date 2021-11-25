@@ -41,4 +41,4 @@ const QuicklyContent = (props: QuicklyContentProps): React.ReactElement => {
   );
 };
 
-export default withStyles(stylesQuicklyContent)(QuicklyContent);
+export default withStyles(stylesQuicklyContent as any)(QuicklyContent) as React.FC<Omit<QuicklyContentProps, "theme" | "classes">>;

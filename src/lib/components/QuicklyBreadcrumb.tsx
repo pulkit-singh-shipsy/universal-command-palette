@@ -25,4 +25,4 @@ const QuicklyBreadcrumb = (props: QuicklyBreadcrumbProps): React.ReactElement =>
   </div>;
 };
 
-export default withStyles(stylesQuicklyBreadcrumb)(QuicklyBreadcrumb);
+export default withStyles(stylesQuicklyBreadcrumb as any)(QuicklyBreadcrumb) as React.FC<Omit<QuicklyBreadcrumbProps, "theme" | "classes">>;

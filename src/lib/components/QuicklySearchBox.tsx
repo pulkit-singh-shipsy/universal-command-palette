@@ -20,4 +20,4 @@ const QuicklySearchBox = (props: QuicklySearchBoxProps): React.ReactElement => {
   return <div>{renderInput()}</div>;
 };
 
-export default withStyles(stylesQuicklySearchBox)(QuicklySearchBox);
+export default withStyles(stylesQuicklySearchBox as any)(QuicklySearchBox) as React.FC<Omit<QuicklySearchBoxProps, "theme" | "classes">>;

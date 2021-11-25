@@ -27,5 +27,5 @@ const QuicklyProvider = (props: QuicklyProviderProps): React.ReactElement => {
 };
 
 const QuicklyProviderWithForm = Form.create()(QuicklyProvider);
-const QuicklyProviderStyled = withStyles(stylesQuicklyProvider)(QuicklyProviderWithForm);
+const QuicklyProviderStyled = withStyles(stylesQuicklyProvider as any)(QuicklyProviderWithForm as any) as React.FC<{ hotkey?: string; }>;
 export default QuicklyProviderStyled;

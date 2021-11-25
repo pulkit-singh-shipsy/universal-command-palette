@@ -106,4 +106,4 @@ const QuicklyList = (props: QuicklyListProps): React.ReactElement => {
   );
 };
 
-export default withStyles(stylesQuicklyList)(QuicklyList);
+export default withStyles(stylesQuicklyList as any)(QuicklyList) as React.FC<Omit<QuicklyListProps, "theme" | "classes">>;

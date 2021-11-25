@@ -28,4 +28,4 @@ const QuicklyLauncher = (props: QuicklyLauncherProps): React.ReactElement => {
   );
 };
 
-export default withStyles(stylesQuicklyLauncher)(QuicklyLauncher);
+export default withStyles(stylesQuicklyLauncher as any)(QuicklyLauncher);
